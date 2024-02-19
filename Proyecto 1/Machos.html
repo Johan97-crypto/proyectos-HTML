@@ -1,0 +1,161 @@
+<!-- Bootstrap 4.5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../img/Bootstrap/style.css">
+    <link rel="stylesheet" href="../Proyecto 1/estilo.css">
+    <title>Caninos | Machos </title>
+    <!-- icono de la pagina (pestaña)-->
+    <link rel="icon"   sizes="80×80" href="../img/cachorro.jpg">
+</head>
+<body>
+  
+    <!--navbar-->
+    <!--navbar shift+alt+abajo=copia-->
+    <!--icono nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+      <a class="navbar-brand"  href="#"> </a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007BFF" class="bi bi-gitlab" viewBox="0 0 16 16">
+        <path d="m15.734 6.1-.022-.058L13.534.358a.57.57 0 0 0-.563-.356.6.6 0 0 0-.328.122.6.6 0 0 0-.193.294l-1.47 4.499H5.025l-1.47-4.5A.572.572 0 0 0 2.47.358L.289 6.04l-.022.057A4.044 4.044 0 0 0 1.61 10.77l.007.006.02.014 3.318 2.485 1.64 1.242 1 .755a.67.67 0 0 0 .814 0l1-.755 1.64-1.242 3.338-2.5.009-.007a4.05 4.05 0 0 0 1.34-4.668Z"/>
+      </svg>
+      <!-- Espacio -->
+      <a class="navbar-brand"  href="#"> </a>
+      
+      <a class="navbar-brand blue-text"  href="https://www.ringo.com.co/actualidad-perruna/perro-macho-o-hembra-cual-adoptar-">Caninos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link blue-text" href="../Proyecto 1/Main.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+         <!--agregar mascotas-->
+         <li class="nav-item active">
+            <a class="nav-link blue-text" id="btnAgregarImagen">Agregar <span class="sr-only">(current)</span></a>
+          </li>
+          <!--.grey-text es la clase personalizada de inicio-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle grey-text" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="../Proyecto 1/Hembras.html">Hembras</a>
+                <a class="dropdown-item grey-text" href="../Proyecto 1/Machos.html">Machos</a>
+                <div class="dropdown-divider"></div>
+                
+            </div>
+        </ul>
+      </div>
+    </nav>
+      
+<!-- Espacios -->
+<br>
+<br>
+<!--imagenes cuando se da scroll-->
+<h1>Galería de Machos</h1>
+
+<div class="gallery">
+  <figure>
+    <img src="../img/Machos/1.jpg" alt="Imagen 1">
+    <figcaption>Max</figure>
+
+  <figure>
+    <img src="../img/Machos/2.jpg" alt="Imagen 2">
+    <figcaption>Rocky</figure>
+
+  <figure>
+    <img src="../img/Machos/3.jpg" alt="Imagen 3">
+    <figcaption>Teddy</figure>
+
+  <figure>
+    <img src="../img/Machos/4.jpg" alt="Imagen 4">
+    <figcaption>Charlie</figure>
+
+  <figure>
+    <img src="../img/Machos/5.jpg" alt="Imagen 5">
+    <figcaption>Bruno</figcaption>
+  </figure>
+</div>
+
+<!--Fin de las fotos-->
+
+<div class="center">  
+      <!-- contenedor -->
+  <div  class="contenedor">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rsTLyukvxGU?si=caZtuLXnkHvbYGqL" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+    </iframe>
+  </div>
+</div>
+<!--agregar fotos-->
+
+<!-- Contenedor para las imágenes -->
+<div class="container mt-5" id="imageContainer">
+    <!-- Aquí se mostrarán las imágenes -->
+  </div>
+  
+  <!-- Bootstrap JS y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+  
+  <script>
+    // Función para manejar la carga de imágenes
+    document.getElementById('btnAgregarImagen').addEventListener('click', function () {
+      // Crear un input de tipo file
+      var input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*'; // Aceptar solo archivos de imagen
+      input.multiple = true; // Permitir la selección de múltiples archivos
+  
+      // Agregar un evento change para manejar la selección de archivos
+      input.addEventListener('change', function (event) {
+        var files = event.target.files; // Obtener los archivos seleccionados
+        var container = document.getElementById('imageContainer'); // Obtener el contenedor de imágenes
+  
+        // Iterar sobre los archivos seleccionados
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          var reader = new FileReader();
+  
+          // Agregar un evento load para manejar la carga del archivo
+          reader.addEventListener('load', function () {
+            var img = document.createElement('img'); // Crear un elemento de imagen
+            img.src = this.result; // Establecer la fuente de la imagen como el contenido del archivo
+            img.className = 'img-thumbnail mr-2 mb-2'; // Agregar clases de Bootstrap para estilo
+            container.appendChild(img); // Agregar la imagen al contenedor
+          });
+  
+          // Leer el contenido del archivo como una URL de datos
+          reader.readAsDataURL(file);
+        }
+      });
+  
+      // Hacer clic en el input para abrir el selector de archivos
+      input.click();
+    });
+  </script>
+  <!--fin de agregar fotos-->
+<!-- Java script -->
+<script src="../Proyecto 1/logica.js"></script> 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+<!-- Scripts al final del body para mejorar el rendimiento -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<!-- Java script -->
+<script src="../Proyecto 1/logica.js"></script> 
+</body>
+</html>

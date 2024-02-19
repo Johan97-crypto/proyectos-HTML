@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titulo a la pagina</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script>
+            let variable=0;
+            var variable2=0;
+            function clic(){
+                let estado1 = 1;
+                variable=parseInt(document.getElementById("num1").value);
+                variable2=parseInt(document.getElementById("num2").value);
+                document.getElementById("num3").value=variable+variable2;
+                
+                estado1=document.getElementById("Resta").checked;
+                estado2=document.getElementById("Suma").checked;
+                if(estado1){
+                    document.getElementById("num3").value=variable-variable2;
+                }
+                if(estado2){
+                    document.getElementById("num3").value=variable+variable2;
+                }
+                if(!estado1 && !estado2){
+                    document.getElementById("num3").value=0;
+                }
+            }
+        </script>    
+    </head>
+
+    <body onload="clic()">
+        <h1>Clase Bootstrap</h1>
+        <form>
+            <div class="mb-3">
+              <label for="num1" class="form-label">Ingrese numero 1</label>
+              <input type="number" class="form-control" id="num1" value="2" step="10" onclick="clic()">
+              <div class="form-text">Aiuda.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="num2" class="form-label">Ingrese numero 2</label>
+                <input type="number" class="form-control" id="num2" value="5" onclick="clic()">
+                <div class="form-text">Aiuda.</div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Suma">
+                <label class="form-check-label" for="Suma">
+                  Suma
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Resta" checked>
+                <label class="form-check-label" for="Resta">
+                  Resta
+                </label>
+              </div>
+
+            <button type="button" class="btn btn-danger" onclick="clic()">Resolver</button>
+            <div class="mb-3">
+                <label for="num3" class="form-label">Resultado</label>
+                <input type="number" class="form-control" id="num3">
+                <div class="form-text">Salida.</div>
+            </div>
+        </form>       
+    </body>
+</html>

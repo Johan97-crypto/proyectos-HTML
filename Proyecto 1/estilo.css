@@ -1,0 +1,71 @@
+/*h1{color:darkgreen}
+/* Las clases se pueden reutilizar, deben iniciar con punto */
+
+/* Los ID son unicos para una etiqueta inician con #*/
+.colorh1{color:darkred;
+  background-color: darkblue;
+  }
+  
+  .tamaño{
+      font-size:44px;
+      margin:10px, 15px, 10px, 15px;
+      border:solid green;
+  }
+  .tamaño2{
+      font-size:12px;
+      margin:10px, 15px, 10px, 15px;
+      border:solid green;
+      
+  }
+
+  .contenedor{
+     display: inline-flex; 
+     padding-bottom: 25px;
+  }
+  #unico{
+    width:50% ;  
+    height: 50%;
+  }
+  .center{
+      position:relative;
+      text-align: center;
+  }
+.grey-text {
+    color: gray !important;
+  }
+  .blue-text{
+    color: blue;
+  }
+  /* aqui empieza la organizacion de las cinco fotos */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  figure {
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  img {
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  figcaption {
+    padding: 10px;
+  }
