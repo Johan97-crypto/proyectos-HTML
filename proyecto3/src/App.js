@@ -5,18 +5,9 @@ import Machos from './Machos'; // Importar el componente de Machos desde su arch
 import Hembras from './Hembras'; // Importar el componente de Hembras desde su archivo
 
 import './App.css';
-import imagenPerro1 from './img/perro1.jpg';
-import imagenPerro2 from './img/perro2.jpg';
-import imagenPerro3 from './img/perro3.jpg';
-import imagenPerro4 from './img/perro4.jpg';
-import imagenPerro5 from './img/perro5.jpg';
 
 function App() {
-  const [imagenes, setImagenes] = useState([
-    // Array de imágenes
-  ]);
-
-  // Resto del código para manejar el estado y las funciones
+ 
 
   return (
     <Router>
